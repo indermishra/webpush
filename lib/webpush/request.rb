@@ -127,7 +127,7 @@ module Webpush
       encrypt_payload(message, subscription.fetch(:keys))
     end
 
-    def encrypt_payload(message, p256dh:, auth:)
+    def encrypt_payload(message, p256dh, auth)
       Encryption.encrypt(message, p256dh, auth)
     end
 
