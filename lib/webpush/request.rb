@@ -7,7 +7,7 @@ module Webpush
   TEMP_GCM_URL = 'https://gcm-http.googleapis.com/gcm'
 
   class Request
-    def initialize(message: "", subscription:, vapid:, **options)
+    def initialize(message, subscription, vapid, options = {})
       endpoint = subscription.fetch(:endpoint)
       @endpoint = endpoint.gsub(GCM_URL, TEMP_GCM_URL)
       @payload = build_payload(message, subscription)
