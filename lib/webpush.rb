@@ -38,7 +38,7 @@ module Webpush
         message: message,
         subscription: subscription,
         vapid: vapid,
-        options
+        options: options
       ).perform
     end
 
